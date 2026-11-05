@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aninhamento</title>
+</head>
+<body>
+
+    Digite sua idade!
+
+    <input type="number" id="idade">
+    <button onclick="votar()">Entre</button>
+
+    <script>
+        function votar() {
+
+            let idade = parseInt(document.getElementById("idade").value);
+
+            if (idade < 16) {
+                alert("Você não pode votar ainda");
+            } else {
+
+                if (idade < 18) {
+                    alert("Você pode votar, mas seu voto é facultativo");
+                } else {
+
+                    if (idade > 65) {
+                        alert("Seu voto é facultativo");
+                    } else {
+                        alert("Seu voto é obrigatório");
+                    }
+
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
